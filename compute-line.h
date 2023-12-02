@@ -4,6 +4,6 @@
 #define TRUE 1
 #define FALSE 0
 
-int getLineCode(const char* line);
+int getLineCode(char* line);
 
 #endif // !COMPUTE_LINE_H

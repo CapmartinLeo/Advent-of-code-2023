@@ -2,7 +2,7 @@
 
 #include "../compute-line.h"
 
-int getLineCode(const char *line) {
+int getLineCode(char *line) {
   int firstFound = FALSE;
   int first = 0;
   int last = 0;

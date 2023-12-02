@@ -36,13 +36,12 @@ int getNumber(const char *line, size_t i) {
   return num;
 }
 
-int getLineCode(const char *line) {
+int getLineCode(char *line) {
   int firstFound = FALSE;
   int first = 0;
   int last = 0;
 
   for (size_t i = 0; line[i] != '\0'; i++) {
-    char c = line[i];
     int num = getNumber(line, i);
     if (num != -1) {
       last = num;

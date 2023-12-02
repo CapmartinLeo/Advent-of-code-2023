@@ -4,15 +4,12 @@ CFLAGS = -std=c99 -Wall -Wextra -Werror -Wvla -fsanitize=address
 LDFLAGS = -fsanitize=address
 
 days := $(wildcard day-*)
-days-2 := $(days:=-2)
 
 all: $(days) $(days-2)
 
-$(days): $$@/compute-line.o main.o
+$(days): $$@/compute-line$(v).o main.o
 	$(CC) $(CFLAGS) $^ -o $@.bin
 
-$(days-2): $$@/compute-line-2.o main.o
-	$(CC) $(CFLAGS) $^ -o $@.bin
-
+.PHONY: clean
 clean:
 	$(RM) -rf *.o day-*/*.o *.bin
