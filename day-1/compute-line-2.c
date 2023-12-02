@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "trebuchet.h"
+#include "../compute-line.h"
 
 const char NUMBERS[9][6] = {
     "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "trebuchet.h"
+#include "../compute-line.h"
 
 int getLineCode(const char *line) {
   int firstFound = FALSE;

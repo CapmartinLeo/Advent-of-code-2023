@@ -1,4 +1,5 @@
-#include "trebuchet.h"
+#define _POSIX_C_SOURCE 200809L
+#include "compute-line.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,7 +17,6 @@ int getAnswer(const char *fileName) {
   while (length > 0) {
     int code = getLineCode(line);
     res += code;
-    printf("%s: %d\n", line, code);
     length = getline(&line, &n, f);
   }
   free(line);
